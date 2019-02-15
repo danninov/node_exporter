@@ -169,6 +169,7 @@ def create_metrcis_of_physical_drive(physical_drive, detailed_info_array, contro
         add_metric('pd_shield_counter', pd_baselabel, state['Shield Counter'])
         add_metric('pd_media_errors', pd_baselabel, state['Media Error Count'])
         add_metric('pd_other_errors', pd_baselabel, state['Other Error Count'])
+        add_metric('pd_drive_temperature', pd_baselabel, state['Drive Temperature'].split('C')[0])
         add_metric('pd_predictive_errors', pd_baselabel, state['Predictive Failure Count'])
         add_metric('pd_smart_alerted', pd_baselabel,
                    int(state['S.M.A.R.T alert flagged by drive'] == 'Yes'))
